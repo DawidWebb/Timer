@@ -1,0 +1,63 @@
+<!-- zadanie 12 ver2 - stoper -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>stoper</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .time {
+        position: absolute;
+        width: 100vw;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        font-size: 60px;
+        text-align: center;
+        font-family: monospace;
+      }
+
+      button {
+        font-size: 44px;
+        margin: 30px;
+      }
+      .title {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%);
+      }
+      .color {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: blueviolet;
+      }
+      .color:hover {
+        width: 120px;
+        height: 120px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="main">Start</button>
+    <h3 class="title">Kliknij 5 razy</h3>
+    <div class="color"></div>
+    <div class="time">
+      <p>Czas od startu:</p>
+      <div>---</div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
