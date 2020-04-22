@@ -5,29 +5,21 @@ const panel = document.querySelector("div.time div");
 let time = 0;
 let active = false;
 let idI;
-const points = [];
+let points = [];
 
 const game = () => {
   let point = 1;
   points.push(point);
 
   if (points.length === 5) {
-    active = !active;
-
     clearInterval(idI);
   }
 };
 
 const timer = () => {
-  if (active === false) {
-    active = !active;
-
-    idI = setInterval(start, 10);
-  } else {
-    active = !active;
-    clearInterval(idI);
-    reset();
-  }
+  clearInterval(idI);
+  reset();
+  idI = setInterval(start, 10);
 };
 
 const start = () => {
@@ -36,6 +28,7 @@ const start = () => {
 };
 
 const reset = () => {
+  points = [];
   time = 0;
   panel.textContent = "---";
   active = false;
